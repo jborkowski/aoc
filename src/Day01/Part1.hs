@@ -1,12 +1,19 @@
 {-# LANGUAGE DataKinds #-}
-module DayO1.Part1 where
+module Day01.Part1 (
+    solution
+  , calcRequiredFuel
+) where
 
-solution :: IO Int
+import Helpers (stringToIntArray)
+
+solution :: IO ()
 solution = do
-  file <- readFile "input.txt"
-  -- todo: add solution here
-  return 1
+    input <- readFile "./src/Day01/input.txt"
+    putStr "Solution for Day 1 - Part 1: "
+    putStrLn . show . part1 $ input
+  where
+    part1 = foldl (\totalFuel mass -> totalFuel + calcRequiredFuel mass) 0 . stringToIntArray
 
-requiredFuel :: String -> Int
-requiredFuel mass =
-  (read mass `div` 3) - 2
+calcRequiredFuel :: Int -> Int
+calcRequiredFuel mass =
+  (mass `div` 3) - 2
