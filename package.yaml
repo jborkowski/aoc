@@ -3,24 +3,18 @@ version:             0.1.0.0
 github:              "jborkowski/aoc"
 license:             BSD3
 author:              "Jonatan Borkowski"
-maintainer:          "jonatanborkowski@wp.pl"
+maintainer:          "jonatan.borkowski@protonmail.com"
 copyright:           "2019 Jonatan Borkowski"
 
 extra-source-files:
 - README.md
-- ChangeLog.md
 
-# Metadata used when publishing your package
-# synopsis:            Short description of your package
-# category:            Web
-
-# To avoid duplicated efforts in documentation and dealing with the
-# complications of embedding Haddock markup inside cabal files, it is
-# common to point users to the README.md file.
 description:         Please see the README on GitHub at <https://github.com/jborkowski/aoc#readme>
 
 dependencies:
 - base >= 4.7 && < 5
+- containers
+- split
 
 library:
   source-dirs: src
@@ -46,3 +40,4 @@ tests:
     - -with-rtsopts=-N
     dependencies:
     - aoc
+    - hspec
