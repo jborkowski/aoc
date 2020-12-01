@@ -31,6 +31,8 @@ library
       Day02.Part1
       Day02.Part2
       Day03.Part1
+      Y2020.Day01.Part1
+      Y2020.Day01.Part2
       Helpers
   other-modules:
       Paths_aoc
