@@ -33,6 +33,8 @@ library
       Day03.Part1
       Y2020.Day01.Part1
       Y2020.Day01.Part2
+      Y2020.Day02.Part1
+      Y2020.Day02.Part2
       Helpers
   other-modules:
       Paths_aoc
@@ -42,6 +44,9 @@ library
       base >=4.7 && <5
     , containers
     , split
+    , parsec
+    , text
+    , attoparsec
   default-language: Haskell2010
 
 executable aoc-exe

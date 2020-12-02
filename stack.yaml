@@ -1,4 +1,11 @@
-resolver: lts-14.22
+resolver: nightly-2020-12-02
 
 packages:
 - .
+
+ghc-options:
+  "$everything": -haddock
+
+cradle:
+  stack:
+    component: "haskell-language-server:lib"
